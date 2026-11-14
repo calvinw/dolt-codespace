@@ -1,10 +1,10 @@
 # Dolt Codespace
 
-A GitHub Codespace for working with [Dolt](https://www.dolthub.com), a SQL
-database with Git-style versioning. You install Dolt yourself, log in to
-DoltHub, then clone, change, commit and push a database you own.
+A GitHub Codespace where an AI agent sets up [Dolt](https://www.dolthub.com),
+a SQL database with Git-style versioning, and helps you clone, change, commit
+and push a database you own on DoltHub.
 
-The codespace also has three AI coding agents installed with `npm install -g`:
+The codespace has three AI coding agents installed with `npm install -g`:
 
 | Agent | npm package | Command |
 |---|---|---|
@@ -12,80 +12,39 @@ The codespace also has three AI coding agents installed with `npm install -g`:
 | Codex | `@openai/codex` | `codex` |
 | Claude Code | `@anthropic-ai/claude-code` | `claude` |
 
-## Start it
+`AGENTS.md` tells the agents how to install Dolt, log in to DoltHub and work
+with the database, so your prompts can be short.
 
-Click **Code → Codespaces → Create codespace on main**.
+## Before you start
 
-## 1. Install Dolt
-
-In the terminal:
-
-```bash
-sudo bash -c 'curl -L https://github.com/dolthub/dolt/releases/latest/download/install.sh | bash'
-```
-
-Check that it worked:
-
-```bash
-dolt version
-```
-
-## 2. Tell Dolt who you are
-
-Use the email of your DoltHub account. Do this before logging in.
-
-```bash
-dolt config --global --add user.name "Your Name"
-dolt config --global --add user.email "you@example.com"
-```
-
-## 3. Log in to DoltHub
-
-Sign in to [dolthub.com](https://www.dolthub.com) in a browser tab first. Then:
-
-```bash
-dolt login
-```
-
-1. Dolt prints a link to the DoltHub **Credentials** page. Ctrl-click
-   (Cmd-click on a Mac) it.
-2. On that page, type a description such as `codespace` and click **Create**.
-3. Go back to the terminal. After a few seconds it prints
-   `Key successfully associated with user: ...`.
-
-You stay logged in until you delete the codespace.
-
-## 4. Fork, clone, commit, push
-
-1. On DoltHub, open
+1. Make an account on [DoltHub](https://www.dolthub.com) and stay signed in.
+2. Open
    [calvinw/retail-orders](https://www.dolthub.com/repositories/calvinw/retail-orders)
-   and click **Fork** to make your own copy.
-2. Clone **your** fork:
+   and click **Fork**. This makes your own copy, which you can push to.
+3. Click **Code → Codespaces → Create codespace on main** on this repo, then
+   start an agent in the terminal (for example `opencode`).
 
-   ```bash
-   dolt clone YOUR-USERNAME/retail-orders
-   cd retail-orders
-   ```
+## Prompts to give the agent
 
-3. Look at the data:
+Replace the parts in capitals with your own details.
 
-   ```bash
-   dolt sql -q "SELECT * FROM products;"
-   ```
+```default
+Install Dolt and set it up with my name YOUR NAME and my DoltHub email YOUR EMAIL.
+```
 
-4. Make a change, check it, and commit it:
+```default
+Log me in to DoltHub.
+```
 
-   ```bash
-   dolt sql -q "INSERT INTO customers (first_name, last_name, email) VALUES ('First', 'Last', 'me@example.com');"
-   dolt diff
-   dolt add .
-   dolt commit -m "Add myself as a customer"
-   ```
+The agent gives you a link. Open it, type a description such as `codespace`,
+click **Create**, then tell the agent you are done.
 
-5. Push it to your fork on DoltHub:
+```default
+Clone my fork YOUR-DOLTHUB-USERNAME/retail-orders and show me its tables and what is in them.
+```
 
-   ```bash
-   dolt push origin main
-   ```
+```default
+Add me as a customer in the customers table. Show me what changed, commit it with a clear message, and push it to my fork.
+```
 
-Refresh your fork on DoltHub to see your commit.
+Refresh your fork on DoltHub and open its commit history to see your commit.
