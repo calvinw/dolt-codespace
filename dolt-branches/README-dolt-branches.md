@@ -22,13 +22,12 @@ numbers on different branches.
 
 ## Before you start
 
-1. Start `opencode` in the terminal.
-2. If Dolt isn't installed in this codespace yet, give the agent the Step 1
-   prompt from the [retail-orders](../retail-orders/README-retail-orders.md)
-   exercise. (You'll need the Step 2 login prompt from there too, for Step 7
-   below.)
+1. Start your agent in the terminal.
+2. If Dolt isn't installed in this codespace yet, or you aren't logged in to
+   DoltHub, do Steps 1 to 4 of the
+   [make-your-own-database](../make-your-own-database/README-make-your-own-database.md) exercise first. (You need the login for Step 7.)
 
-Copy each prompt into OpenCode and press **Enter**. Read what the agent says
+Copy each prompt into the agent and press **Enter**. Read what the agent says
 before you go on.
 
 ## Step 1: Build the Database
@@ -94,9 +93,8 @@ On DoltHub, go to <https://www.dolthub.com/profile> and click
 **Create Database**. Name it `boutique-branches`, make it **Public**, and
 click **Create**. Leave it empty.
 
-If you haven't logged in to DoltHub in this codespace yet, give the agent the
-Step 2 prompt from the [retail-orders](../retail-orders/README-retail-orders.md)
-exercise first.
+If you haven't logged in to DoltHub in this codespace yet, do Steps 3 and 4
+of the [make-your-own-database](../make-your-own-database/README-make-your-own-database.md) exercise first.
 
 ```default
 Add my DoltHub database YOUR-DOLTHUB-USERNAME/boutique-branches as the remote called origin, and push both the main and the price-increase branches to it. Then give me the DoltHub links where my manager can see: the price-increase branch, each of the three views on price-increase, the same views on main, and the differences between main and price-increase.

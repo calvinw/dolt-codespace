@@ -58,11 +58,16 @@ out. Instead:
 
 ## Working with a database
 
-- Create each Dolt database inside its exercise's folder: `retail-orders/retail-orders`,
-  `sales-csv-data/store-sales`, `company-analysis/BusMgmtBenchmarks`.
-  `.gitignore` keeps Dolt data (`.dolt/`) out of git, so these are never
-  pushed to GitHub. Don't remove those lines from `.gitignore`, and don't
-  force-add them. Run `dolt` commands from inside the database folder.
+- Always create a Dolt database inside the folder of the exercise the
+  student is working on, as its README says (for example
+  `retail-orders/retail-orders`, `sales-csv-data/store-sales`,
+  `excel-to-database/boutique-sales`, `dolt-branches/boutique`,
+  `company-analysis/BusMgmtBenchmarks`,
+  `make-your-own-database/DATABASE-NAME`). Never in the home folder or the
+  repo root. `.gitignore` keeps Dolt data (`.dolt/`) out of git, so the
+  databases are never pushed to GitHub. Don't remove those lines from
+  `.gitignore`, and don't force-add them. Run `dolt` commands from inside the
+  database folder.
 - Run SQL with `dolt sql -q "..."`, or load a file with
   `dolt sql < FILE.sql`. Don't open the interactive `dolt sql` shell; it
   waits for input.
@@ -197,6 +202,31 @@ meant to have problems in it, for the student to discover.
 - A pull request is created on the DoltHub website, not with dolt. After the
   student merges or closes it there, bring `main` up to date with
   `dolt checkout main` and `dolt pull origin main`.
+
+## Checking the student is set up
+
+When asked to check the setup, check each of these and fix what's missing,
+telling the student in plain words what you found:
+
+1. `dolt version` works (otherwise install Dolt, see above).
+2. `dolt config --global --list` has `user.name` and `user.email`.
+3. `dolt creds check` succeeds and names the student's DoltHub username. If
+   not, log them in with the `dolt creds new` steps above. Finish only when
+   `dolt creds check` names their username.
+
+## Dreaming up a database (make-your-own-database/)
+
+- Design something small and simple on the student's topic: exactly two
+  tables, each with a primary key, and one foreign key from the second table
+  to the first. 5 to 10 rows of made-up data in each. Use plain column names
+  and simple types (INT, VARCHAR, DECIMAL for money, DATE).
+- Explain the design and wait for the student's OK before creating anything.
+- Write it as a SQL file in `make-your-own-database/`, create the first table
+  before the second, and keep apostrophes out of SQL comments (Dolt reads
+  them as quotes).
+- When asked to break the foreign key, run a plain `INSERT` that points to a
+  missing row, show the error, and explain it in plain words. Don't commit
+  anything after a failed insert.
 
 ## Pushing to DoltHub
 

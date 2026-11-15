@@ -18,10 +18,13 @@ points to `customers` and `orders.product_id` points to `products`.
 ## Before you start
 
 1. Make an account on [DoltHub](https://www.dolthub.com) and stay signed in.
-2. Start a codespace on your copy of this repo, run `opencode`, and connect
-   OpenRouter (see the main README).
+2. Start a codespace on your copy of this repo and start your agent in the
+   terminal.
 
-Copy each prompt below into OpenCode and press **Enter**. Wait for the agent
+If you already did Steps 1 to 4 of [make-your-own-database](../make-your-own-database/README-make-your-own-database.md) in this
+codespace, Dolt is installed and you are logged in: skip to Step 3 below.
+
+Copy each prompt below into the agent and press **Enter**. Wait for the agent
 to finish and read what it did before you give it the next one. Replace the
 parts in capitals with your own details.
 

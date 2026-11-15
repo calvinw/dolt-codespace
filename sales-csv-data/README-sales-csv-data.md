@@ -22,12 +22,12 @@ doesn't make sense.
 
 ## Before you start
 
-1. Start `opencode` in the terminal.
+1. Start your agent in the terminal.
 2. If Dolt isn't installed in this codespace yet, or you aren't logged in to
-   DoltHub, give the agent the Step 1 and Step 2 prompts from the
-   [retail-orders](../retail-orders/README-retail-orders.md) exercise.
+   DoltHub, do Steps 1 to 4 of the
+   [make-your-own-database](../make-your-own-database/README-make-your-own-database.md) exercise first.
 
-Copy each prompt into OpenCode and press **Enter**. Read what the agent says
+Copy each prompt into the agent and press **Enter**. Read what the agent says
 before you go on. Replace the parts in capitals with your own details.
 
 ## Step 1: Understand the Data

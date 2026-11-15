@@ -27,7 +27,7 @@ Write down anything that looks wrong or odd. Hints: look closely at the
 
 ## Step 2: Have the Agent Check the Workbook
 
-Start `opencode` in the terminal. Copy each prompt into OpenCode and press
+Start your agent in the terminal. Copy each prompt into the agent and press
 **Enter**. Read what the agent says before you go on. If it asks to install
 something, allow it.
 
@@ -57,9 +57,9 @@ the design, go on.
 
 ## Step 4: Build It and Watch the Database Say No
 
-If Dolt isn't set up yet in this codespace, give the agent the Step 1 and
-Step 2 prompts from the
-[retail-orders](../retail-orders/README-retail-orders.md) exercise before you go on.
+If Dolt isn't set up yet in this codespace, or you aren't logged in to
+DoltHub, do Steps 1 to 4 of the
+[make-your-own-database](../make-your-own-database/README-make-your-own-database.md) exercise before you go on.
 
 ```default
 Create a new Dolt database in a folder called excel-to-database/boutique-sales. Create the two tables exactly as we designed them. Then load every row from both worksheets of the workbook, and tell me about every row the database refuses and why. Don't fix anything yet.

@@ -12,18 +12,15 @@ into a PowerPoint deck.
 
 ## Before you start
 
-1. Start a codespace on your copy of this repo, run `opencode`, and connect
-   OpenRouter (see the main README).
-2. If Dolt isn't installed in this codespace yet, paste this first:
-
-   ```default
-   Install Dolt and set it up with my name YOUR NAME and my email YOUR EMAIL.
-   ```
+1. Start a codespace on your copy of this repo and start your agent in the
+   terminal.
+2. If Dolt isn't installed in this codespace yet, do Steps 1 and 2 of the
+   [make-your-own-database](../make-your-own-database/README-make-your-own-database.md) exercise first.
 
 You don't need to log in to DoltHub: you only read this database, you don't
 push to it.
 
-Copy each prompt into OpenCode and press **Enter**. Read what the agent says
+Copy each prompt into the agent and press **Enter**. Read what the agent says
 before you go on. If it asks to run a command or install something, allow it.
 
 ## Step 1: Get the Database
