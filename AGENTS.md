@@ -40,8 +40,11 @@ out. Instead:
 
 ## Working with a database
 
-- Keep Dolt databases in the home folder (for example `~/retail-orders`),
-  not inside this git repository, so they are never committed to git.
+- Create each Dolt database inside its exercise's folder: `retail-orders/retail-orders`,
+  `sales-csv-data/store-sales`, `company-analysis/BusMgmtBenchmarks`.
+  `.gitignore` keeps Dolt data (`.dolt/`) out of git, so these are never
+  pushed to GitHub. Don't remove those lines from `.gitignore`, and don't
+  force-add them. Run `dolt` commands from inside the database folder.
 - Run SQL with `dolt sql -q "..."`, or load a file with
   `dolt sql < FILE.sql`. Don't open the interactive `dolt sql` shell; it
   waits for input.
@@ -52,8 +55,8 @@ out. Instead:
 
 ## Creating a database from a SQL file (retail-orders/)
 
-1. `mkdir ~/retail-orders && cd ~/retail-orders && dolt init`
-2. `dolt sql < /path/to/this/repo/retail-orders/retail-orders.sql`
+1. `mkdir retail-orders/retail-orders && cd retail-orders/retail-orders && dolt init`
+2. `dolt sql < ../retail-orders.sql`
 3. Show the tables and row counts, then `dolt add .` and
    `dolt commit -m "Create retail orders database"`.
 
@@ -77,7 +80,7 @@ This exercise teaches database design, so the user makes the decisions:
 ## Analyzing calvinw/BusMgmtBenchmarks (company-analysis/)
 
 The user only reads this database. Clone it with
-`dolt clone calvinw/BusMgmtBenchmarks` in the home folder (no login needed),
+`dolt clone calvinw/BusMgmtBenchmarks` inside `company-analysis/` (no login needed),
 and never push to it or change it.
 
 Tables:

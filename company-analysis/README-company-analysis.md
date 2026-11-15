@@ -29,7 +29,7 @@ before you go on. If it asks to run a command or install something, allow it.
 ## Step 1: Get the Database
 
 ```default
-Clone the Dolt database calvinw/BusMgmtBenchmarks into my home folder.
+Clone the Dolt database calvinw/BusMgmtBenchmarks into the company-analysis folder.
 ```
 
 ## Step 2: Understand the Database
@@ -110,4 +110,5 @@ Commit the company-analysis/report folder to git and push it to GitHub.
 ## What to Hand In
 
 The link to your GitHub repository, with `company-analysis/report/` holding
-your charts, `analysis.md` and `company_comparison.pptx`.
+your charts, `analysis.md` and `company_comparison.pptx`. (The cloned
+database stays out of GitHub: `.gitignore` skips it.)

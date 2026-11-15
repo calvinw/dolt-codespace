@@ -44,10 +44,12 @@ worked.
 ## Step 3: Build the Database in the Codespace
 
 ```default
-Create a new Dolt database called retail-orders in my home folder. Load retail-orders/retail-orders.sql into it, show me the three tables and how many rows each has, then commit everything with the message "Create retail orders database".
+Create a new Dolt database in a folder called retail-orders/retail-orders (inside this exercise's folder). Load retail-orders/retail-orders.sql into it, show me the three tables and how many rows each has, then commit everything with the message "Create retail orders database".
 ```
 
-The database now exists only in your codespace.
+The database now exists only in your codespace, in `retail-orders/retail-orders`.
+Git ignores it (see `.gitignore`), so it never goes to GitHub: DoltHub is
+where it gets shared.
 
 ## Step 4: Make an Empty Database on DoltHub
 

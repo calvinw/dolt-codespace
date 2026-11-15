@@ -36,16 +36,16 @@ file in the repository.
 
 ## The exercise
 
-Follow [retail-orders/README.md](retail-orders/README.md). The agent installs
+Follow [retail-orders/README-retail-orders.md](retail-orders/README-retail-orders.md). The agent installs
 Dolt, logs you in to DoltHub, builds the retail orders database from
 `retail-orders/retail-orders.sql`, and pushes it to a new database on your
 DoltHub account.
 
-Then do [sales-csv-data/README.md](sales-csv-data/README.md): starting from one
+Then do [sales-csv-data/README-sales-csv-data.md](sales-csv-data/README-sales-csv-data.md): starting from one
 big `sales.csv` file, you and the agent design a database with three tables
 (stores, products and sales), build it in Dolt, and push it to DoltHub.
 
-Finally, do [company-analysis/README.md](company-analysis/README.md): the
+Finally, do [company-analysis/README-company-analysis.md](company-analysis/README-company-analysis.md): the
 agent analyzes an existing database,
 [calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks),
 compares two retail companies in two years with charts, and builds a

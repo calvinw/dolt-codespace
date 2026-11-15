@@ -22,7 +22,7 @@ doesn't make sense.
 
 ## Before you start
 
-1. Do the [retail-orders](../retail-orders/README.md) exercise first, so Dolt
+1. Do the [retail-orders](../retail-orders/README-retail-orders.md) exercise first, so Dolt
    is installed and you are logged in to DoltHub in this codespace. If you are
    in a new codespace, give the agent the Step 1 and Step 2 prompts from that
    exercise again.
@@ -68,7 +68,7 @@ Add a NOT NULL to every column that should always have a value. Show me the fina
 When you are happy with the design:
 
 ```default
-Create a new Dolt database called store-sales in my home folder. Create the three tables exactly as we designed them, fill them with all the data from sales-csv-data/sales.csv, and show me how many rows each table has.
+Create a new Dolt database in a folder called sales-csv-data/store-sales. Create the three tables exactly as we designed them, fill them with all the data from sales-csv-data/sales.csv, and show me how many rows each table has.
 ```
 
 ```default
