@@ -3,10 +3,10 @@
 **Start here.** This exercise also sets up Dolt in your codespace and logs
 you in to DoltHub. The other exercises use that same setup.
 
-In this exercise you choose a topic you like, and the agent dreams up a small
-practice database about it: **two tables, connected by one foreign key**.
-First the agent installs Dolt and logs you in to DoltHub. Then it helps you
-build the database, test it, and share it on DoltHub.
+**Your job:** create a database with **2 tables and 1 foreign key** that
+connects them, on a topic you choose. The agent dreams up the tables and
+made-up data with you. First it installs Dolt and logs you in to DoltHub.
+Then it helps you build the database and share it on DoltHub.
 
 A **foreign key** is a column in one table that must match the key of a row
 in the other table. It's what connects the two tables: for example, if one
@@ -84,7 +84,9 @@ Pick your topic. Then:
 Dream up a small practice database about YOUR TOPIC. Give it two tables connected by one foreign key, with 5 to 10 rows of made-up data in each. Don't create anything yet: explain in plain words what each table holds, its columns, its primary key, and how the foreign key connects the tables. Show me a few example rows.
 ```
 
-Read the design. If you want changes (another column, different data, more
+Check the design before you go on. It must have **exactly 2 tables and 1
+foreign key**. If it has more tables or keys, or no foreign key, ask the agent
+to fix it. If you want other changes (another column, different data, more
 rows), tell the agent. Make sure you can answer:
 
 - What is the primary key of each table?
@@ -119,7 +121,8 @@ Open the links. On DoltHub, open **Commit Log** to see your commit.
 
 ## What to Hand In
 
-1. The link to your database on DoltHub.
+1. The link to your database on DoltHub. It must have 2 tables and 1
+   foreign key.
 2. Short answers, in your own words:
    - What are your two tables, and what is the primary key of each?
    - What is the foreign key, and which table does it point to?
