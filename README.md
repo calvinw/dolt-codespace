@@ -48,5 +48,5 @@ big `sales.csv` file, you and the agent design a database with three tables
 Finally, do [company-analysis/README-company-analysis.md](company-analysis/README-company-analysis.md): the
 agent analyzes an existing database,
 [calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks),
-compares two retail companies in two years with charts, and builds a
+compares two retail companies in one year with charts, and builds a
 PowerPoint deck.
