@@ -74,6 +74,59 @@ This exercise teaches database design, so the user makes the decisions:
   values, and report any differences.
 - Show every SQL query you run, so the user can learn from it.
 
+## Analyzing calvinw/BusMgmtBenchmarks (company-analysis/)
+
+The user only reads this database. Clone it with
+`dolt clone calvinw/BusMgmtBenchmarks` in the home folder (no login needed),
+and never push to it or change it.
+
+Tables:
+
+- `company_info`: one row per company. Primary key `company`. Has
+  `display_name`, `ticker_symbol`, `segment`, `subsegment`, `currency`,
+  `units`.
+- `financials`: one row per company per year. Primary key
+  (`company_name`, `year`). Raw amounts: `Net Revenue`, `Cost of Goods`,
+  `Gross Margin`, `SGA`, `Operating Profit`, `Net Profit`, `Inventory`,
+  `Current Assets`, `Total Assets`, `Current Liabilities`, `Liabilities`,
+  `Total Shareholder Equity`, ...
+- `financial_metrics`: one row per company per year, same key. Ratios that
+  are already computed: `Gross_Margin_Percentage`, `SGA_Percentage`,
+  `Operating_Profit_Margin_Percentage`, `Net_Profit_Margin_Percentage`,
+  `Inventory_Turnover`, `Asset_Turnover`, `Return_on_Assets`,
+  `Current_Ratio`, `Quick_Ratio`, `Debt_to_Equity`,
+  `Three_Year_Revenue_CAGR`, `Sales_Current_Year_vs_LY`.
+- `segment_metrics`, `subsegment_metrics`: benchmark averages by segment.
+- Views such as `company_comparison_2024_view` join these for one year.
+
+Join `financials` and `financial_metrics` to `company_info` with
+`company_name = company`.
+
+Things to get right:
+
+- Column names in `financials` contain spaces: quote them with backticks,
+  for example `` `Net Revenue` ``.
+- Amounts are in **thousands** of the company's own currency (`units` and
+  `currency` in `company_info`). 4948587 means about 4.95 billion. Most are
+  USD, but some are GBP, EUR, CAD or SEK. Don't compare raw amounts across
+  currencies; compare percentages and ratios, or say clearly that the
+  currencies differ.
+- Percentages are already in percent (62.27 means 62.27%).
+- `year` is the fiscal year. `reportDate` is when that fiscal year ended,
+  which for many retailers is early the next calendar year.
+- Use the ratios in `financial_metrics` rather than recomputing them, and if
+  you do compute something yourself, say so.
+- To get data into Python, run
+  `dolt sql -r csv -q "SELECT ..." > file.csv` inside the database folder and
+  read the CSV with pandas.
+- pandas, matplotlib and python-pptx are installed. Save charts as PNG files
+  and build decks with python-pptx. Keep the script you used in the report
+  folder so the work can be rerun.
+- In slides, keep text short and check that it fits; put one chart per
+  slide, large enough to read.
+- Every number in the analysis and slides must come from a query you ran.
+  Show the SQL.
+
 ## Pushing to DoltHub
 
 - `dolt push` cannot create a database on DoltHub. The user first creates an

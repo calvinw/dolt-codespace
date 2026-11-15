@@ -44,3 +44,9 @@ DoltHub account.
 Then do [sales-csv-data/README.md](sales-csv-data/README.md): starting from one
 big `sales.csv` file, you and the agent design a database with three tables
 (stores, products and sales), build it in Dolt, and push it to DoltHub.
+
+Finally, do [company-analysis/README.md](company-analysis/README.md): the
+agent analyzes an existing database,
+[calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks),
+compares two retail companies in two years with charts, and builds a
+PowerPoint deck.
