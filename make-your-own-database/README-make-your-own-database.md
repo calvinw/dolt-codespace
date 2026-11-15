@@ -8,19 +8,10 @@ practice database about it: **two tables, connected by one foreign key**.
 First the agent installs Dolt and logs you in to DoltHub. Then it helps you
 build the database, test it, and share it on DoltHub.
 
-Some topic ideas (or use your own):
-
-| Topic | Table 1 | Table 2 (points to table 1) |
-|---|---|---|
-| A coffee shop | `drinks` | `orders` (each order is for one drink) |
-| A sneaker collection | `brands` | `sneakers` (each sneaker is made by one brand) |
-| A dog-walking business | `dogs` | `walks` (each walk is for one dog) |
-| A boutique's designers | `designers` | `dresses` (each dress is by one designer) |
-| A playlist | `artists` | `songs` (each song is by one artist) |
-
 A **foreign key** is a column in one table that must match the key of a row
-in the other table. It's what connects the two tables: in the coffee shop, an
-order's `drink_id` must be a drink that's really on the menu.
+in the other table. It's what connects the two tables: for example, if one
+table lists a coffee shop's drinks and the other its orders, each order's
+`drink_id` must be a drink that's really on the menu.
 
 ## Before you start
 
