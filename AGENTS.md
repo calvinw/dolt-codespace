@@ -148,6 +148,29 @@ Things to get right:
 - Every number in the analysis and slides must come from a query you ran.
   Show the SQL.
 
+## Turning the Excel workbook into a database (excel-to-database/)
+
+`boutique-sales.xlsx` has a **Products** and a **Sales** worksheet. It is
+meant to have problems in it, for the student to discover.
+
+- Read it with Python (for example pandas or openpyxl; install them if
+  needed). Never change or overwrite the workbook.
+- `unit_price` and `revenue` on Sales are formulas (VLOOKUP and
+  quantity × price). Their saved results include `#N/A`. They are calculated
+  values, not data to store; the student decides this in the design step.
+- When asked to find problems, report what you find in plain words, with the
+  rows involved. Don't fix anything until the student says how.
+- Load the data so that every rule is checked and every refused row is
+  reported: create the tables with the agreed keys first, then insert the
+  rows one at a time with plain `INSERT` statements, collecting each error.
+  Do NOT use `dolt table import -u`, `REPLACE`, `INSERT IGNORE`, or
+  `ON DUPLICATE KEY UPDATE`: they silently overwrite or skip rows, which hides
+  the very problems this exercise is about.
+- Report each refused row with its key values and the reason in plain words,
+  for example "Sale 1041 was refused because product 13 isn't in the
+  products table".
+- Apply exactly the fixes the student chooses.
+
 ## Pushing to DoltHub
 
 - `dolt push` cannot create a database on DoltHub. The user first creates an

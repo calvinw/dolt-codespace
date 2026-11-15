@@ -45,6 +45,10 @@ Then do [sales-csv-data/README-sales-csv-data.md](sales-csv-data/README-sales-cs
 big `sales.csv` file, you and the agent design a database with three tables
 (stores, products and sales), build it in Dolt, and push it to DoltHub.
 
+Next, do [excel-to-database/README-excel-to-database.md](excel-to-database/README-excel-to-database.md):
+open an Excel workbook with two worksheets, find its problems, and with the
+agent turn it into a database whose keys keep those problems out.
+
 Finally, do [company-analysis/README-company-analysis.md](company-analysis/README-company-analysis.md): the
 agent analyzes an existing database,
 [calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks),
