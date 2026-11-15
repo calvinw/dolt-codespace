@@ -186,6 +186,17 @@ meant to have problems in it, for the student to discover.
 - Never merge into `main` or delete a branch unless the student asks to.
 - Push each branch by name: `dolt push origin main`, then
   `dolt push origin BRANCH`.
+- After pushing, give the student full DoltHub links (replace USER, DB and
+  BRANCH; URL-encode the query, spaces as %20):
+  - a branch's tables: `https://www.dolthub.com/repositories/USER/DB/data/BRANCH`
+  - a view or query on a branch:
+    `https://www.dolthub.com/repositories/USER/DB/query/BRANCH?q=SELECT%20*%20FROM%20category_summary`
+  - the differences between two branches:
+    `https://www.dolthub.com/repositories/USER/DB/compare/main...BRANCH`
+  - pull requests: `https://www.dolthub.com/repositories/USER/DB/pulls`
+- A pull request is created on the DoltHub website, not with dolt. After the
+  student merges or closes it there, bring `main` up to date with
+  `dolt checkout main` and `dolt pull origin main`.
 
 ## Pushing to DoltHub
 

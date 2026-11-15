@@ -85,38 +85,62 @@ Notice that only a few rows in `products` changed, yet every report that uses
 prices changed with them. In a workbook, you would have to make sure every
 sheet and formula picked up the new prices.
 
-## Step 7: Decide
+## Step 7: Put Your Branch on DoltHub for Your Manager
 
-You are the manager. Either **keep** the price increase or **reject** it.
+Your manager can't see your codespace, so put the database on DoltHub, with
+**both** branches.
 
-To keep it:
+On DoltHub, go to <https://www.dolthub.com/profile> and click
+**Create Database**. Name it `boutique-branches`, make it **Public**, and
+click **Create**. Leave it empty.
 
-```default
-Merge the price-increase branch into main, then show me the category_summary view on main and the commit history of main.
-```
-
-To reject it, leave `main` as it is. Your branch stays as a record of the
-idea.
-
-Either way, put your database on DoltHub, with both branches. On DoltHub, go
-to <https://www.dolthub.com/profile> and click **Create Database**. Name it
-`boutique-branches`, make it **Public**, and click **Create**. Leave it empty.
+If you haven't logged in to DoltHub in this codespace yet, give the agent the
+Step 2 prompt from the [retail-orders](../retail-orders/README-retail-orders.md)
+exercise first.
 
 ```default
-Add my DoltHub database YOUR-DOLTHUB-USERNAME/boutique-branches as the remote called origin, and push both the main and the price-increase branches to it.
+Add my DoltHub database YOUR-DOLTHUB-USERNAME/boutique-branches as the remote called origin, and push both the main and the price-increase branches to it. Then give me the DoltHub links where my manager can see: the price-increase branch, each of the three views on price-increase, the same views on main, and the differences between main and price-increase.
 ```
 
-On DoltHub, use the **branch** menu to switch between `main` and
-`price-increase`, and open the views on each.
+Open each link the agent gives you. On DoltHub you can also use the
+**branch** menu (it says `main`) to switch between `main` and
+`price-increase`.
+
+## Step 8: Ask Your Manager to Approve It
+
+On DoltHub, a **pull request** is how you ask someone to review a branch and
+bring it into `main`.
+
+1. On your `boutique-branches` page, click **Pull Requests**, then
+   **Create Pull Request**.
+2. Set it to merge **from** `price-increase` **into** `main`.
+3. Give it a title such as "Raise Dresses prices 10%". In the description,
+   write two or three sentences for your manager: what you changed, and what
+   happens to revenue and profit (use your numbers from Step 5).
+4. Click **Create Pull Request**. Open its **Diff** tab to see what your
+   manager will see.
+
+Copy the link to your pull request.
+
+## Step 9: Decide
+
+Now be the manager. Read the pull request and decide:
+
+- **Approve:** click **Merge**. The new prices become part of `main`.
+- **Reject:** click **Close**. `main` keeps the old prices, and the branch
+  stays as a record of the idea.
+
+```default
+Get the latest main branch from DoltHub, then show me the category_summary view on main and the commit history of main. Did the price increase become part of main?
+```
 
 ## What to Hand In
 
-1. The link to your `boutique-branches` database on DoltHub, with both
-   branches.
+1. The link to your pull request on DoltHub.
 2. Short answers, in your own words:
    - Which category did you change, and by how much?
    - How did revenue and profit change for that category, and for the whole
      business?
-   - Did you merge the price increase into `main` or not? Why?
+   - Did you merge the pull request or close it? Why?
    - Why is a branch safer than editing the real data, or copying a
      spreadsheet?

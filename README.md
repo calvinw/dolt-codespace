@@ -43,7 +43,7 @@ Each folder is one exercise, with its own directions in a `README-` file:
 | [retail-orders](retail-orders/README-retail-orders.md) | The agent installs Dolt, logs you in to DoltHub, builds a retail orders database from `retail-orders.sql`, and pushes it to a new database on your DoltHub account. |
 | [sales-csv-data](sales-csv-data/README-sales-csv-data.md) | Starting from one big `sales.csv` file, you and the agent design a database with three tables (stores, products and sales), build it in Dolt, and push it to DoltHub. |
 | [excel-to-database](excel-to-database/README-excel-to-database.md) | Open an Excel workbook with two worksheets, find its problems, and with the agent turn it into a database whose keys keep those problems out. |
-| [dolt-branches](dolt-branches/README-dolt-branches.md) | Build a small boutique database with three views, raise prices on a branch, and compare what the views show on each branch before deciding whether to merge the change. |
+| [dolt-branches](dolt-branches/README-dolt-branches.md) | Build a small boutique database with three views, raise prices on a branch, compare what the views show on each branch, push the branch to DoltHub, and open a pull request for your manager to approve. |
 | [company-analysis](company-analysis/README-company-analysis.md) | The agent analyzes an existing database, [calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks), compares two retail companies in one year with charts, and builds a PowerPoint deck. |
 
 The first time you use Dolt in a codespace, the agent has to install it and
