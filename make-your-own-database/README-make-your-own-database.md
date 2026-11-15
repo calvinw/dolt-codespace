@@ -99,26 +99,13 @@ as `coffee-shop` or `sneaker-collection`.
 Save the design as a SQL file called make-your-own-database/DATABASE-NAME.sql. Then create a new Dolt database in the folder make-your-own-database/DATABASE-NAME, load the SQL file into it, show me both tables, and commit it with a message that says what the database is.
 ```
 
-## Step 7: Test the Foreign Key
-
-```default
-Try to add a row to the second table that points to something that doesn't exist in the first table. Show me what the database does, and explain in plain words why.
-```
-
-The database should refuse the row. That's the foreign key protecting your
-data. Then add a correct row:
-
-```default
-Now add one correct row to the second table, show me what changed, and commit it.
-```
-
-## Step 8: Ask Questions
+## Step 7: Ask Questions
 
 ```default
 Suggest three interesting questions about my data that need both tables. Answer each one with SQL that joins the tables, and show me the SQL.
 ```
 
-## Step 9: Share It on DoltHub
+## Step 8: Share It on DoltHub
 
 On DoltHub, go to <https://www.dolthub.com/profile> and click
 **Create Database**. Give it the same name as your database
@@ -128,14 +115,13 @@ On DoltHub, go to <https://www.dolthub.com/profile> and click
 Add my DoltHub database YOUR-DOLTHUB-USERNAME/DATABASE-NAME as the remote called origin and push main to it. Then give me the DoltHub links to my database and to each of its two tables.
 ```
 
-Open the links. On DoltHub, open **Commit Log** to see your two commits.
+Open the links. On DoltHub, open **Commit Log** to see your commit.
 
 ## What to Hand In
 
 1. The link to your database on DoltHub.
 2. Short answers, in your own words:
    - What are your two tables, and what is the primary key of each?
-   - What is the foreign key, and what did the database do when you tried to
-     break it?
-   - Which of the three questions in Step 8 was most interesting, and what
+   - What is the foreign key, and which table does it point to?
+   - Which of the three questions in Step 7 was most interesting, and what
      was the answer?

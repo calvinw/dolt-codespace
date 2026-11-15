@@ -224,9 +224,6 @@ telling the student in plain words what you found:
 - Write it as a SQL file in `make-your-own-database/`, create the first table
   before the second, and keep apostrophes out of SQL comments (Dolt reads
   them as quotes).
-- When asked to break the foreign key, run a plain `INSERT` that points to a
-  missing row, show the error, and explain it in plain words. Don't commit
-  anything after a failed insert.
 
 ## Pushing to DoltHub
 

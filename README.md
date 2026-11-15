@@ -16,7 +16,7 @@ Each folder is one exercise, with its own directions in a `README-` file:
 
 | Folder | What you do |
 |---|---|
-| [make-your-own-database](make-your-own-database/README-make-your-own-database.md) | Pick a topic and the agent dreams up a small database about it: two tables joined by one foreign key. The agent first installs Dolt and logs you in to DoltHub, then you build it, test the foreign key, query it, and push it to DoltHub. |
+| [make-your-own-database](make-your-own-database/README-make-your-own-database.md) | Pick a topic and the agent dreams up a small database about it: two tables joined by one foreign key. The agent first installs Dolt and logs you in to DoltHub, then you build it, query it, and push it to DoltHub. |
 | [retail-orders](retail-orders/README-retail-orders.md) | The agent installs Dolt, logs you in to DoltHub, builds a retail orders database from `retail-orders.sql`, and pushes it to a new database on your DoltHub account. |
 | [sales-csv-data](sales-csv-data/README-sales-csv-data.md) | Starting from one big `sales.csv` file, you and the agent design a database with three tables (stores, products and sales), build it in Dolt, and push it to DoltHub. |
 | [excel-to-database](excel-to-database/README-excel-to-database.md) | Open an Excel workbook with two worksheets, find its problems, and with the agent turn it into a database whose keys keep those problems out. |
