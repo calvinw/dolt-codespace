@@ -4,17 +4,6 @@ A GitHub Codespace where an AI agent sets up [Dolt](https://www.dolthub.com),
 a SQL database with Git-style versioning, and helps you clone, change, commit
 and push a database you own on DoltHub.
 
-The codespace has three AI coding agents installed with `npm install -g`:
-
-| Agent | npm package | Command |
-|---|---|---|
-| OpenCode | `@opencode/cli` | `opencode` |
-| Codex | `@openai/codex` | `codex` |
-| Claude Code | `@anthropic-ai/claude-code` | `claude` |
-
-`AGENTS.md` tells the agents how to install Dolt, log in to DoltHub and work
-with the database, so your prompts can be short.
-
 ## Before you start
 
 1. Make an account on [DoltHub](https://www.dolthub.com) and stay signed in.
