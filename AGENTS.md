@@ -171,6 +171,22 @@ meant to have problems in it, for the student to discover.
   products table".
 - Apply exactly the fixes the student chooses.
 
+## Branches (dolt-branches/)
+
+- Always tell the student which branch they are on (`dolt branch` shows it
+  with a `*`) before and after you change anything.
+- Explain a branch in plain words: a separate copy of the database for
+  trying a change, while `main` keeps the real data.
+- Switch branches with `dolt checkout BRANCH`. Create one with
+  `dolt checkout -b BRANCH`. Commit changes on the branch before switching.
+- To compare a view or table on two branches without switching, use
+  `SELECT * FROM view_name AS OF 'main'` next to the same query on the
+  current branch. Show the results side by side, with the differences.
+- `dolt diff main BRANCH` shows exactly which rows differ.
+- Never merge into `main` or delete a branch unless the student asks to.
+- Push each branch by name: `dolt push origin main`, then
+  `dolt push origin BRANCH`.
+
 ## Pushing to DoltHub
 
 - `dolt push` cannot create a database on DoltHub. The user first creates an
