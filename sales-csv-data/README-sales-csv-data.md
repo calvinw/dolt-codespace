@@ -22,11 +22,10 @@ doesn't make sense.
 
 ## Before you start
 
-1. Do the [retail-orders](../retail-orders/README-retail-orders.md) exercise first, so Dolt
-   is installed and you are logged in to DoltHub in this codespace. If you are
-   in a new codespace, give the agent the Step 1 and Step 2 prompts from that
-   exercise again.
-2. Start `opencode` in the terminal.
+1. Start `opencode` in the terminal.
+2. If Dolt isn't installed in this codespace yet, or you aren't logged in to
+   DoltHub, give the agent the Step 1 and Step 2 prompts from the
+   [retail-orders](../retail-orders/README-retail-orders.md) exercise.
 
 Copy each prompt into OpenCode and press **Enter**. Read what the agent says
 before you go on. Replace the parts in capitals with your own details.

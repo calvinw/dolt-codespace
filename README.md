@@ -34,23 +34,17 @@ OpenCode starts with **DeepSeek V4.1 Flash** on OpenRouter, set in
 Treat your API key like a password: paste it only into OpenCode, never into a
 file in the repository.
 
-## The exercise
+## Exercises
 
-Follow [retail-orders/README-retail-orders.md](retail-orders/README-retail-orders.md). The agent installs
-Dolt, logs you in to DoltHub, builds the retail orders database from
-`retail-orders/retail-orders.sql`, and pushes it to a new database on your
-DoltHub account.
+Each folder is one exercise, with its own directions in a `README-` file:
 
-Then do [sales-csv-data/README-sales-csv-data.md](sales-csv-data/README-sales-csv-data.md): starting from one
-big `sales.csv` file, you and the agent design a database with three tables
-(stores, products and sales), build it in Dolt, and push it to DoltHub.
+| Folder | What you do |
+|---|---|
+| [retail-orders](retail-orders/README-retail-orders.md) | The agent installs Dolt, logs you in to DoltHub, builds a retail orders database from `retail-orders.sql`, and pushes it to a new database on your DoltHub account. |
+| [sales-csv-data](sales-csv-data/README-sales-csv-data.md) | Starting from one big `sales.csv` file, you and the agent design a database with three tables (stores, products and sales), build it in Dolt, and push it to DoltHub. |
+| [excel-to-database](excel-to-database/README-excel-to-database.md) | Open an Excel workbook with two worksheets, find its problems, and with the agent turn it into a database whose keys keep those problems out. |
+| [company-analysis](company-analysis/README-company-analysis.md) | The agent analyzes an existing database, [calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks), compares two retail companies in one year with charts, and builds a PowerPoint deck. |
 
-Next, do [excel-to-database/README-excel-to-database.md](excel-to-database/README-excel-to-database.md):
-open an Excel workbook with two worksheets, find its problems, and with the
-agent turn it into a database whose keys keep those problems out.
-
-Finally, do [company-analysis/README-company-analysis.md](company-analysis/README-company-analysis.md): the
-agent analyzes an existing database,
-[calvinw/BusMgmtBenchmarks](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks),
-compares two retail companies in one year with charts, and builds a
-PowerPoint deck.
+The first time you use Dolt in a codespace, the agent has to install it and
+log you in to DoltHub. The prompts for that are Steps 1 and 2 of
+[retail-orders](retail-orders/README-retail-orders.md).

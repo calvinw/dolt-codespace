@@ -59,7 +59,7 @@ the design, go on.
 
 If Dolt isn't set up yet in this codespace, give the agent the Step 1 and
 Step 2 prompts from the
-[retail-orders](../retail-orders/README-retail-orders.md) exercise first.
+[retail-orders](../retail-orders/README-retail-orders.md) exercise before you go on.
 
 ```default
 Create a new Dolt database in a folder called excel-to-database/boutique-sales. Create the two tables exactly as we designed them. Then load every row from both worksheets of the workbook, and tell me about every row the database refuses and why. Don't fix anything yet.
