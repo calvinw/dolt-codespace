@@ -40,16 +40,34 @@ out. Instead:
 
 ## Working with a database
 
-- The user forks `calvinw/retail-orders` on the DoltHub website. You cannot
-  push to `calvinw/...`; always clone the user's own fork:
-  `dolt clone USERNAME/retail-orders`, then work inside that folder.
-- Run SQL with `dolt sql -q "..."`. Don't open the interactive `dolt sql`
-  shell; it waits for input.
+- Keep Dolt databases in the home folder (for example `~/retail-orders`),
+  not inside this git repository, so they are never committed to git.
+- Run SQL with `dolt sql -q "..."`, or load a file with
+  `dolt sql < FILE.sql`. Don't open the interactive `dolt sql` shell; it
+  waits for input.
 - Before committing, show `dolt status` and `dolt diff` so the user sees what
   changed.
 - Commit with `dolt add .` and `dolt commit -m "..."`, using a message that
-  says what changed. Then `dolt push origin main`.
-- After pushing, tell the user to refresh their fork on DoltHub to see the
-  commit.
+  says what changed.
+
+## Creating a database from a SQL file (retail-orders/)
+
+1. `mkdir ~/retail-orders && cd ~/retail-orders && dolt init`
+2. `dolt sql < /path/to/this/repo/retail-orders/retail-orders.sql`
+3. Show the tables and row counts, then `dolt add .` and
+   `dolt commit -m "Create retail orders database"`.
+
+## Pushing to DoltHub
+
+- `dolt push` cannot create a database on DoltHub. The user first creates an
+  empty database on the DoltHub website. If they haven't, tell them to do
+  that, then wait.
+- Push only to the user's own DoltHub account, never to `calvinw/...`:
+  `dolt remote add origin USERNAME/retail-orders`, then
+  `dolt push -u origin main` the first time and `dolt push` after that.
+- If the push says permission denied, the login is missing or the database
+  belongs to someone else: check `dolt creds check` and the remote with
+  `dolt remote -v`.
+- After pushing, tell the user to refresh their database page on DoltHub.
 - Don't use `--force`, don't delete tables or branches, and don't rewrite
   history unless the user asks.
