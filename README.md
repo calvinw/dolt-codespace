@@ -22,17 +22,18 @@ with the database, so your prompts can be short.
    [calvinw/retail-orders](https://www.dolthub.com/repositories/calvinw/retail-orders)
    and click **Fork**. This makes your own copy, which you can push to.
 3. Get an OpenRouter API key at <https://openrouter.ai/keys>.
-4. Click **Code → Codespaces → Create codespace on main** on this repo.
-5. When the codespace opens, the terminal asks for your OpenRouter key. Paste
-   it and press Enter (nothing shows as you paste). It is saved in the
-   codespace, not in the repo. If no question appears, open a new terminal
-   with the **+** in the terminal panel.
-6. Start OpenCode with `opencode` and pick an OpenRouter model with `/models`.
+4. Save the key as a Codespaces secret: open
+   <https://github.com/settings/codespaces>, click **New secret**, name it
+   `OPENROUTER_API_KEY`, paste the key as the value, and under
+   **Repository access** pick this repo. Click **Add secret**.
+5. Click **Code → Codespaces → Create codespace on main** on this repo.
+   (If a codespace was already running when you added the secret, restart it
+   so it picks up the key.)
+6. Start OpenCode with `opencode`. It finds your key, turns on OpenRouter, and
+   starts with DeepSeek V4.1 Flash (set in `opencode.json`). Use `/models` to
+   switch models.
 
-To use the key in all your codespaces without pasting it, save it instead as
-a [Codespaces secret](https://github.com/settings/codespaces) named
-`OPENROUTER_API_KEY` and give it access to this repo. To check the key is
-there:
+To check the key reached the codespace, run this in the terminal:
 
 ```bash
 test -n "$OPENROUTER_API_KEY" && echo "key is set" || echo "key is NOT set"
