@@ -21,23 +21,21 @@ with the database, so your prompts can be short.
 2. Open
    [calvinw/retail-orders](https://www.dolthub.com/repositories/calvinw/retail-orders)
    and click **Fork**. This makes your own copy, which you can push to.
-3. Get an OpenRouter API key at <https://openrouter.ai/keys>.
-4. Save the key as a Codespaces secret: open
-   <https://github.com/settings/codespaces>, click **New secret**, name it
-   `OPENROUTER_API_KEY`, paste the key as the value, and under
-   **Repository access** pick this repo. Click **Add secret**.
-5. Click **Code → Codespaces → Create codespace on main** on this repo.
-   (If a codespace was already running when you added the secret, restart it
-   so it picks up the key.)
-6. Start OpenCode with `opencode`. It finds your key, turns on OpenRouter, and
-   starts with DeepSeek V4.1 Flash (set in `opencode.json`). Use `/models` to
-   switch models.
+3. Click **Code → Codespaces → Create codespace on main** on this repo.
 
-To check the key reached the codespace, run this in the terminal:
+## Start OpenCode
 
-```bash
-test -n "$OPENROUTER_API_KEY" && echo "key is set" || echo "key is NOT set"
-```
+1. In the terminal, type `opencode` and press **Enter**.
+2. Type `/connect` and press **Enter**. Start typing `openrouter`, highlight
+   **OpenRouter**, and press **Enter**.
+3. Paste your OpenRouter API key (get one at <https://openrouter.ai/keys>) and
+   press **Enter**.
+
+OpenCode starts with **DeepSeek V4.1 Flash** on OpenRouter, set in
+`opencode.json`. Use `/models` to switch models.
+
+Treat your API key like a password: paste it only into OpenCode, never into a
+file in the repository.
 
 ## Prompts to give the agent
 
