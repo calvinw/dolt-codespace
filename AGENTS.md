@@ -57,13 +57,30 @@ out. Instead:
 3. Show the tables and row counts, then `dolt add .` and
    `dolt commit -m "Create retail orders database"`.
 
+## Designing a database with the user (sales-csv-data/)
+
+This exercise teaches database design, so the user makes the decisions:
+
+- When asked to design or suggest tables, explain your reasoning and wait.
+  Don't create a database or tables until the user says to.
+- Build exactly the design the user agreed to. If you think it has a
+  problem, say so, but don't change it on your own.
+- To load a CSV, you can import it into a temporary table first
+  (`dolt table import -c --pk COLUMN TABLE FILE.csv`), fill the real tables
+  from it with `INSERT ... SELECT`, then drop the temporary table before
+  committing. Import guesses types (money becomes FLOAT), so always fill the
+  real tables, with the agreed types, from it.
+- When checking that nothing was lost, compare row counts and the actual
+  values, and report any differences.
+- Show every SQL query you run, so the user can learn from it.
+
 ## Pushing to DoltHub
 
 - `dolt push` cannot create a database on DoltHub. The user first creates an
   empty database on the DoltHub website. If they haven't, tell them to do
   that, then wait.
 - Push only to the user's own DoltHub account, never to `calvinw/...`:
-  `dolt remote add origin USERNAME/retail-orders`, then
+  `dolt remote add origin USERNAME/DATABASE-NAME`, then
   `dolt push -u origin main` the first time and `dolt push` after that.
 - If the push says permission denied, the login is missing or the database
   belongs to someone else: check `dolt creds check` and the remote with

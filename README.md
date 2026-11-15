@@ -40,3 +40,7 @@ Follow [retail-orders/README.md](retail-orders/README.md). The agent installs
 Dolt, logs you in to DoltHub, builds the retail orders database from
 `retail-orders/retail-orders.sql`, and pushes it to a new database on your
 DoltHub account.
+
+Then do [sales-csv-data/README.md](sales-csv-data/README.md): starting from one
+big `sales.csv` file, you and the agent design a database with three tables
+(stores, products and sales), build it in Dolt, and push it to DoltHub.
