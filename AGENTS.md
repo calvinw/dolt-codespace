@@ -119,8 +119,8 @@ Things to get right:
 - To get data into Python, run
   `dolt sql -r csv -q "SELECT ..." > file.csv` inside the database folder and
   read the CSV with pandas.
-- pandas, matplotlib and python-pptx are installed. Save charts as PNG files
-  and build decks with python-pptx. Keep the script you used in the report
+- Install whatever you need for charts and slides (for example Python with
+  pandas, matplotlib and python-pptx). Save charts as PNG files. Keep the script you used in the report
   folder so the work can be rerun.
 - In slides, keep text short and check that it fits; put one chart per
   slide, large enough to read.
