@@ -21,8 +21,22 @@ with the database, so your prompts can be short.
 2. Open
    [calvinw/retail-orders](https://www.dolthub.com/repositories/calvinw/retail-orders)
    and click **Fork**. This makes your own copy, which you can push to.
-3. Click **Code → Codespaces → Create codespace on main** on this repo, then
-   start an agent in the terminal (for example `opencode`).
+3. Get an OpenRouter API key at <https://openrouter.ai/keys>.
+4. Click **Code → Codespaces → Create codespace on main** on this repo.
+5. When the codespace opens, the terminal asks for your OpenRouter key. Paste
+   it and press Enter (nothing shows as you paste). It is saved in the
+   codespace, not in the repo. If no question appears, open a new terminal
+   with the **+** in the terminal panel.
+6. Start OpenCode with `opencode` and pick an OpenRouter model with `/models`.
+
+To use the key in all your codespaces without pasting it, save it instead as
+a [Codespaces secret](https://github.com/settings/codespaces) named
+`OPENROUTER_API_KEY` and give it access to this repo. To check the key is
+there:
+
+```bash
+test -n "$OPENROUTER_API_KEY" && echo "key is set" || echo "key is NOT set"
+```
 
 ## Prompts to give the agent
 
