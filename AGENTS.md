@@ -41,20 +41,30 @@ dolt config --global --add user.email "EMAIL"
 
 ## Logging in to DoltHub
 
-Do NOT run `dolt login`. It waits for the browser and your command will time
-out. Instead:
+Set-up order: install Dolt (see above), then ask the student for their name
+and DoltHub email and set them with `dolt config` (see above), then have the
+student log in to DoltHub themselves in a second terminal.
 
-1. Make a new key: `dolt creds new`. It prints a public key.
-2. Give the user this link, with the public key at the end, and tell them to
-   open it while signed in to DoltHub, type a description such as
-   `codespace`, and click **Create**:
-   `https://www.dolthub.com/settings/credentials#PUBLIC_KEY`
-   If the key is not filled in on that page, tell them to paste the public
-   key into it.
-3. Wait for the user to say they have done it.
-4. Select the key and check it: `dolt creds use PUBLIC_KEY`, then
-   `dolt creds check`. It should report the user's DoltHub username. If it
-   fails, the key was not added yet: ask them to try the link again.
+The student runs `dolt login` themselves, in their own terminal. Do NOT run
+`dolt login` yourself: it waits for the browser and your command will time
+out.
+
+1. Make sure Dolt is installed and the name and email are set.
+2. Tell the student, step by step:
+   - Open a new terminal: in the menu at the top, click **Terminal**, then
+     **New Terminal** (or click the **+** in the terminal panel).
+   - Type `dolt login` and press Enter.
+   - Dolt prints a link starting with
+     `https://www.dolthub.com/settings/credentials`. Click it (or copy it
+     into the browser) while signed in to DoltHub.
+   - On the Credentials page the key is already filled in. Type a
+     description such as `codespace` and click **Create**.
+   - Go back to the terminal. After a few seconds Dolt says it is logged in
+     and shows their username. Then come back to the agent and type `done`.
+3. Wait for the student to say they have done it.
+4. Check it with `dolt creds check`. It should report the student's DoltHub
+   username. If it fails, the key was not added yet: ask them to run
+   `dolt login` again and click the new link.
 
 ## Working with a database
 
@@ -211,7 +221,7 @@ telling the student in plain words what you found:
 1. `dolt version` works (otherwise install Dolt, see above).
 2. `dolt config --global --list` has `user.name` and `user.email`.
 3. `dolt creds check` succeeds and names the student's DoltHub username. If
-   not, log them in with the `dolt creds new` steps above. Finish only when
+   not, have them run `dolt login` as in "Logging in to DoltHub" above. Finish only when
    `dolt creds check` names their username.
 
 ## Dreaming up a database (make-your-own-database/)
@@ -227,9 +237,10 @@ telling the student in plain words what you found:
 
 ## Pushing to DoltHub
 
-- `dolt push` cannot create a database on DoltHub. The user first creates an
-  empty database on the DoltHub website. If they haven't, tell them to do
-  that, then wait.
+- You cannot create a database on DoltHub for the student: `dolt push` does
+  not create one. The student first creates an empty database on the
+  DoltHub website (<https://www.dolthub.com/profile>, **Create Database**).
+  If they haven't, tell them exactly how, then wait.
 - Push only to the user's own DoltHub account, never to `calvinw/...`:
   `dolt remote add origin USERNAME/DATABASE-NAME`, then
   `dolt push -u origin main` the first time and `dolt push` after that.
